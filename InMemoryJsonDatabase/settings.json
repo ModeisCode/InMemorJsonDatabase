@@ -1,0 +1,7 @@
+{
+    "ip": "localhost",
+    "port": 9999,
+    "username": "admin",
+    "password": "default",
+    "version": "latest"
+}

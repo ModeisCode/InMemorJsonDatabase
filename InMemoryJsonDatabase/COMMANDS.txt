@@ -1,0 +1,68 @@
+ ___                                    _              ___  ___  
+ |_ _|_ _  _ __  ___ _ __  ___ _ _ _  _ (_)___ ___ _ _ |   \| _ \ 
+  | || ' \| '  \/ -_\ '  \/ _ \ '_| || || (_-</ _ \ ' \| |) | _ \ 
+ |___|_||_|_|_|_\___|_|_|_\___/_|  \_, |/ /__/\___/_||_|___/|___/ 
+                                   |__/__/                        
+
+LOGIN>>
+
+imjdb login <ip_address>:<port>:<username>:<password> 
+
+IN MEMORY>>
+
+[GROUPS1]
+    [KEY1]:[VALUE]
+    [KEY2]:[VALUE]
+    [KEY3]:[VALUE]
+    [KEY4]:[VALUE]
+    [KEY5]:[VALUE]
+[GROUPS2]
+    [KEY1]:[VALUE]
+    [KEY2]:[VALUE]
+    [KEY3]:[VALUE]
+    [KEY4]:[VALUE]
+    [KEY5]:[VALUE]
+
+COMMANDS:
+    NEWGROUP GROUP *
+    ADD GROUP KEY NULL *
+    ADD GROUP KEY VALUE *
+    ADD GROUP KEY VALUE,VALUE,VALUE.. * 
+    ADD GROUP KEY:0 VALUE | INDEX 
+    GET GROUP KEY:0 | INDEX
+    IN GROUP
+    OUT GROUP
+    DEL GROUP
+    SETTINGS GROUP <setting>:<value>
+    SETTINGS GROUP KEY <setting>:<value>
+    ALERT GROUP
+    ALERT GROUP KEY
+    DEL GROUP KEY
+    INCR GROUP KEY VALUE <0>
+    DECR GROUP KEY VALUE <0>
+    SHOW GROUP
+    SHOW GROUP SETTINGS
+    SHOW GROUP KEY SETTINGS
+    SHOW USERNAME
+COMMANDS/IN-GROUP:
+    INCR NO KEY VALUE <0> | IN GROUP
+    SETTINGS NO KEY <setting>:<value> | IN GROUP
+    ALERT NO KEY | IN GROUP
+    ADD NO KEY VALUE | IN GROUP
+    ADD NO KEY:0 VALUE | IN GROUP
+    DEL NO KEY | IN GROUP
+    GET NO KEY:0 | IN GROUP
+COMMANDS/OPERATIONS: | CANNOT RUN IN GROUP MODE
+    JSON GROUP KEY <filename.json>
+    JSON GROUP <filename.json>
+    TOTAL GROUP KEY:0 KEY:1 | PRINT
+    COMBINE GROUP KEY:0 KEY1 | PRINT
+    TOTAL GROUP KEY:0 KEY:1 TO KEY:2 | PROCESS
+    COMBINE GROUP KEY:0 KEY:1 TO KEY:2 | PROCESS
+    TOTAL GROUP KEY
+    CRYPT GROUP KEY
+ERRORS:
+    imjdb:90015:ERROR_IN_ADDING_TO_MEMORY
+    imjdb:46890:TO_INDEXED_KEY_NOT_ENOUGH
+    imjdb:48915:COMMAND_NOT_ENOUGH
+    imjdb:94785:PARAMETER_NOT_ENOUGH
